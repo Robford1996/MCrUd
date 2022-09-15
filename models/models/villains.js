@@ -8,5 +8,5 @@ const villainsSchema = new mongoose.Schema({
     img: String
 })
 
-const Villains = mongoose.model("Villains", villainsSchema);
-module.exports =  Villains
+const Villain = mongoose.model("Villains", villainsSchema);
+module.exports =  Villain
