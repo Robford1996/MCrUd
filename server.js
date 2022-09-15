@@ -4,6 +4,8 @@ const app = express()
 require("dotenv").config
 const mongoose = require("mongoose")
 const methodOverride = require("method-override")
+const heroController = require("./controllers/heros.js")
+const villainController = require("./controllers/villains.js")
 
 
 const PORT = process.env.PORT || 3000;
@@ -12,8 +14,8 @@ const MONGODB_URL = process.env.MONGODB_URL;
 //MiddleWare
 app.use(express.urlencoded({ extended: false }))
 app.use(methodOverride("_method"))
-// app.use("/american", americanController)
-// app.use("/national", nationalController)
+app.use("/heros", heroController)
+app.use("/villains", villainController)
 app.use(express.static('public'));
 app.use(express.json());
 
@@ -31,7 +33,7 @@ db.on("disconnected", () => console.log("mongo disconnected"));
 //     res.render("index.ejs")
 // })
 app.get("/", (req, res)=>{
-    res.send("Server is running")
+    res.render("index.ejs")
 })
 
 //Listener

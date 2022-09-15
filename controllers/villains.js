@@ -30,6 +30,9 @@ router.put("/:id", (req, res)=>{
     }else{
         req.body.death = false
     }
+Villains.findByIdAndUpdate(req.params.id, req.body, ()=>{
+    res.redirect("villains")
+})
 })
 
 //CREATE
