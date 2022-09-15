@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heros Index</title>
+</head>
+<body>
+    <header>
+        <h1>Heros Index</h1>
+        <nav>
+            <ul>
+                <li type="none">
+                    <a href="/"><button>Home</button></a>
+                </li>
+                <li type="none">
+                    <a href="/heros/new">Add a Hero</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Heros</h2>
+        <ul>
+            <% for(let i = 0; i< heros.length; i++) {%>
+            <li>
+                <a href="/heros/<%=heros[i]._id%>"><img src="<%=heros[i].img"></a>
+            </li>
+            <% } %>
+        </ul>
+    </main>
+</body>
+</html>

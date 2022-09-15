@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCrUd Hero</title>
+</head>
+<body>
+    <header>
+        <h1><%=hero.name%></h1>
+    </header>
+    <nav>
+        <ul>
+            <li type="none">
+                <a href="/"><button>Home</button></a>
+            </li>
+            <li type="none">
+                <a href="/heros"><button>Heros Index</button></a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            Hero Name: <%=hero.name%> <br />
+            Alias: <%=hero.alias%> <br />
+            Location: <%=hero.location%> <br />
+            Hero Dead?: <%=hero.death%> <br />
+            <img src="<%=hero.img%>" />
+        </section>
+    </main>
+</body>
+</html>

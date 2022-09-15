@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Hero</title>
+</head>
+<body>
+    <header>
+        <h1>Add a Hero</h1>
+        <nav>
+            <li type="none">
+                <a href="/"><button>Home</button></a>
+            </li>
+            <li type="none">
+                <a href="/heros"><button>Heros Index</button></a>
+            </li>
+        </nav>
+    </header>
+    <main>
+        <form action="/heros" method="POST">
+            Hero Name: <input type="text" name="name" /><br />
+            Alias: <input type="text" name="alias" /><br />
+            Location: <input type="text" name="location" /><br />
+            Hero Dead?: <input type="checkbox" name="death" /><br />
+            Image: <input type="text" name="img" /><br />
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Edit</title>
+</head>
+<body>
+    <header>
+        <h1>Edit <%=hero.name%>'s Info</h1>
+        <nav>
+            <ul>
+                <li type="none">
+                    <a href="/"><button>Home</button></a>
+                </li>
+                <li type="none">
+                    <a href="/heros">Heros Index</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+   <main>
+    <h2>
+        <%=hero.name%> Attributes
+    </h2>
+    <form action="/heros/<%=hero.id%>?_method=PUT" method="POST">
+        Hero Name: <input type="text" name="name" value="<%=hero.name%>" /><br />
+        Alias: <input type="text" name="alias" value="<%=hero.alias%>" /><br />
+        Location: <input type="text" name="location" value="<%=hero.location%>" /><br />
+        Hero dead?: <input type="checkbox" name="death" <% if(hero.death===true){%> checked <% } %> /><br />
+        <input type="submit" value="Submit Changes">
+    </form>
+   </main>
+</body>
+</html>
