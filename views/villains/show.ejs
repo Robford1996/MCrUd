@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCrUd Villain</title>
+</head>
+<body>
+    <header>
+        <h1><%=villain.name%></h1>
+        <nav>
+            <ul>
+                <li type="none">
+                    <a href="/"><button>Home</button></a>
+                </li>
+                <li type="none">
+                    <a href="/villains"><button>Villains Index</button></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            Villain Name: <%=villain.name%><br />
+            Alias: <%=villain.alias%><br />
+            Location: <%=villain.location%><br />
+            Villain Dead?: <%=villain.death%><br />
+            <img src="<%villain.img%>">
+        </section>
+        <section>
+            <form action="/villains/<%=villain._id%>?_method=DELETE" method="POST">
+                <input type="submit" value="Delete Villain" />
+            </form>
+        </section>
+        <section>
+            <a href="/villains/<%=villain._id%>/edit"><button>Edit</button></a>
+        </section>
+    </main>
+</body>
+</html>

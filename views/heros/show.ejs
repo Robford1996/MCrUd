@@ -28,6 +28,14 @@
             Hero Dead?: <%=hero.death%> <br />
             <img src="<%=hero.img%>" />
         </section>
+        <section>
+            <form action="/heros/<%=hero._id%>?_method=DELETE" method="POST">
+                <input type="submit" value="Delete Hero" />
+            </form>
+        </section>
+        <section>
+            <a href="/heros/<%=hero._id%>/edit"><button>Edit</button></a>
+        </section>
     </main>
 </body>
 </html>

@@ -19,10 +19,10 @@ app.use("/villains", villainController)
 app.use(express.static('public'));
 app.use(express.json());
 
-mongoose.connect(process.env.DATABASE_URL, {
+mongoose.createConnection(process.env.DATABASE_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-});
+})
 
 const db = mongoose.connection
 db.on("error", (err) => console.log(err.message + "is mongod not running?"))
@@ -32,7 +32,7 @@ db.on("disconnected", () => console.log("mongo disconnected"));
 // app.get("/", (req, res) => {
 //     res.render("index.ejs")
 // })
-app.get("/", (req, res)=>{
+app.get("/", (req, res) => {
     res.render("index.ejs")
 })
 

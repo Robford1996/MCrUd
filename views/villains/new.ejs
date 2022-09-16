@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Villain</title>
+</head>
+<body>
+    <header>
+        <h1>Add a Villain</h1>
+        <nav>
+            <ul>
+                <li type="none">
+                    <a href="/"><button>Home</button></a>
+                </li>
+                <li type="none">
+                    <a href="/villains"><button>Villains Index</button></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="/villains" method="POST">
+            Villain Name: <input type="text" name="name" /><br />
+            Alias: <input type="text" name="alias" /><br />
+            Location: <input type="text" name="location" /><br />
+            Villain Dead?: <input type="checkbox" name="death" /><br />
+            Image: <input type="text" name="img" /><br />
+            <input type="submit" value="Add Villain">
+        </form>
+    </main>
+</body>
+</html>
